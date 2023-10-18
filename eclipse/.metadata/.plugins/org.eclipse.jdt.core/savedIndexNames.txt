@@ -1,0 +1,5 @@
+INDEX VERSION 1.134+C:\Users\Tarde.12_b21_ribera.000\Desktop\PSP\eclipse\.metadata\.plugins\org.eclipse.jdt.core
+3011209426.index
+1865797976.index
+473553751.index
+495250236.index

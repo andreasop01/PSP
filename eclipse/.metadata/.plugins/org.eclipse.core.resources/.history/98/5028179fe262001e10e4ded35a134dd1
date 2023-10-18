@@ -1,0 +1,25 @@
+package Procesos;
+
+import java.io.File;
+import java.io.IOException;
+
+public class LlamaSumaFichero {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		ProcessBuilder pd= new ProcessBuilder("java","Procesos.Suma");
+		pd.directory(new File(".\\bin"));
+		
+		File entrada=new File("numeros.txt");
+		File salida=new File("salida.txt");
+		File error=new File("error.txt");
+		
+		pd.redirectInput(entrada);
+		pd.redirectOutput(salida);
+		pd.redirectError(error);
+		
+		Process p=pd.start();		
+
+	}
+
+}
