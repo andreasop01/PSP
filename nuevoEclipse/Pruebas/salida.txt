@@ -1,0 +1,3 @@
+Dime un numero: 
+Dime otro numero: 
+entre 10 y 15 hay : 2 numero/s primo/s
