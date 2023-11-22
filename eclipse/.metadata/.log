@@ -660,6 +660,7 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+<<<<<<< HEAD
 !SESSION 2023-11-18 15:50:30.608 -----------------------------------------------
 eclipse.buildId=4.29.0.20230907-1200
 java.version=17.0.9
@@ -1666,12 +1667,17 @@ EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
 !SESSION 2023-11-19 14:09:00.985 -----------------------------------------------
 eclipse.buildId=4.29.0.20230907-1200
+=======
+!SESSION 2023-11-20 21:00:30.511 -----------------------------------------------
+eclipse.buildId=4.28.0.20230608-1200
+>>>>>>> 063e33ffd83bd356b5f9dd5e01b68c7369ecf86a
 java.version=18.0.2.1
 java.vendor=Oracle Corporation
 BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
 Framework arguments:  -product org.eclipse.epp.package.java.product
 Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
 
+<<<<<<< HEAD
 !ENTRY ch.qos.logback.classic 1 0 2023-11-19 14:09:03.089
 !MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
 
@@ -1681,6 +1687,14 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.e
 !ENTRY org.eclipse.jface 2 0 2023-11-19 14:09:16.421
 !MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
 !SUBENTRY 1 org.eclipse.jface 2 0 2023-11-19 14:09:16.421
+=======
+!ENTRY org.eclipse.core.resources 2 10035 2023-11-20 21:00:36.764
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2023-11-20 21:00:38.860
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-11-20 21:00:38.860
+>>>>>>> 063e33ffd83bd356b5f9dd5e01b68c7369ecf86a
 !MESSAGE A conflict occurred for CTRL+SHIFT+T:
 Binding(CTRL+SHIFT+T,
 	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
@@ -1699,6 +1713,7 @@ Binding(CTRL+SHIFT+T,
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.egit.ui 2 0 2023-11-19 14:09:19.517
 !MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
 user global configuration and to define the default location to store repositories: 'C:\Users\andre'. If this is
@@ -1913,3 +1928,11 @@ java.lang.IllegalArgumentException: release 18 is not found in the system
 	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:207)
 	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:300)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+=======
+!ENTRY org.eclipse.egit.ui 2 0 2023-11-20 21:00:41.979
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Tarde.12_b21_ribera.000'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+>>>>>>> 063e33ffd83bd356b5f9dd5e01b68c7369ecf86a
