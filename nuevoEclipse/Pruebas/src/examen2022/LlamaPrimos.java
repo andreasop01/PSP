@@ -19,8 +19,7 @@ public class LlamaPrimos {
 			OutputStream op=p.getOutputStream();
 			String numero1=sc.next()+"\n";
 			op.write(numero1.getBytes());
-			op.flush();
-			
+
 			String numero2=sc.next()+"\n";
 			op.write(numero2.getBytes());
 			op.flush();
