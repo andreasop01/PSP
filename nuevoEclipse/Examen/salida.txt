@@ -1,0 +1,2 @@
+Dime un numero: 
+10 No es primo
