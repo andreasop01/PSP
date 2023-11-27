@@ -20,6 +20,8 @@ def main():
     hilo1.start()
     hilo2.start()
 
+    #hilo1.join()
+    #hilo2.join()
 
 
     print(f"Valos de contador {contador}")
