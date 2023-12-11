@@ -6,37 +6,35 @@ import java.io.IOException;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.util.Scanner;
 
 public class BinarioCliente {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
 		String host="localhost";
 		int puerto=6000;
 		Socket cliente;
 		
-		InetAddress ip=null;
+		
 		
 		try {
-			ip = InetAddress.getByName("192.168.21.100");
-		} catch (UnknownHostException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-			
-		try {
 			cliente=new Socket(host,puerto);
-			String numero="10";
+			String numero="";
+			DataOutputStream flujoSalida=null;
+			DataInputStream flujoEntrada=null;
 			
-			//FLUJO DE SALIDA AL SERVIDOR -->ESCRIBE
-			DataOutputStream flujoSalida=new DataOutputStream(cliente.getOutputStream());
-			flujoSalida.writeUTF(numero);
-			
-			//FLUJO DE ENTRADA -->LEE
-			DataInputStream flujoEntrada=new DataInputStream(cliente.getInputStream());
-			System.out.println("Recibo del servidor: "+flujoEntrada.readUTF());
-			
-			
+			while(!numero.equals("0")) {
+				//FLUJO DE SALIDA AL SERVIDOR -->ESCRIBE
+				numero=sc.next();
+				flujoSalida=new DataOutputStream(cliente.getOutputStream());
+				flujoSalida.writeUTF(numero);
+				//FLUJO DE ENTRADA -->LEE
+				flujoEntrada=new DataInputStream(cliente.getInputStream());
+				System.out.println("Recibo del servidor: "+flujoEntrada.readUTF());
+			}
+
 			//Cerrar Streams y socket
 			flujoEntrada.close();
 			flujoSalida.close();

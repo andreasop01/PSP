@@ -21,22 +21,23 @@ public class BinarioServidor {
 			Socket cliente=servidor.accept();
 			System.out.println("Cliente aceptado ");
 			
-			System.out.println("Cconectado..."+cliente.getInetAddress());
-			
-			
-			
-		
-			
+			System.out.println("Conectado..."+cliente.getInetAddress());
 			//FLUJO DE ENTRADA -->LEE
-			DataInputStream flujoEntrada=new DataInputStream(cliente.getInputStream());
+			DataInputStream flujoEntrada=null;
+			DataOutputStream flujoSalida=null;
+			String binario="";
+			
+			while(!binario.equals("0")) {
+				
+				flujoEntrada=new DataInputStream(cliente.getInputStream());
+				binario=Integer.toBinaryString(Integer.parseInt(flujoEntrada.readUTF()));
+				
+				//FLUJO DE SALIDA AL SERVIDOR -->ESCRIBE
+				flujoSalida=new DataOutputStream(cliente.getOutputStream());
+				flujoSalida.writeUTF(binario);
+					
+			}
 
-			String binario=Integer.toBinaryString(Integer.parseInt(flujoEntrada.readUTF()));
-			
-			//FLUJO DE SALIDA AL SERVIDOR -->ESCRIBE
-			DataOutputStream flujoSalida=new DataOutputStream(cliente.getOutputStream());
-			flujoSalida.writeUTF(binario);
-			
-			
 			//Cerrar Streams y socket
 			flujoEntrada.close();
 			flujoSalida.close();
