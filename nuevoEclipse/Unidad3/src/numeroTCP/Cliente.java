@@ -30,16 +30,22 @@ public class Cliente {
 			output.flush();
 			
 			//2 recibimos el objeto modificado
-			
+			if(numero<0) {
+				System.out.println("Numero incorrecto "+numero);
+				continue;
+			}
 			Numeros n1=(Numeros)input.readObject();
 			System.out.println("recibido el obejto modificado "+n1);
 
 		}
+		
+		
 		//cerrar flujos
 		input.close();
 		output.close();
+		cliente.close();
 		
-		System.out.println("Numero incorrecto "+numero);
+		
 
 	}
 

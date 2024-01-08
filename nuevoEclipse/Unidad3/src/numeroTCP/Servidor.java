@@ -23,21 +23,26 @@ public class Servidor {
 		ObjectOutputStream output=new ObjectOutputStream(cliente.getOutputStream());
 		
 		
-		Numeros n=new Numeros();
-		n=(Numeros)input.readObject();
+		Numeros n=new Numeros(1);
 		
-		 if(n.getNumero()>0) {
-			
+		 while(n.getNumero()>0) {
+			 
+			n=(Numeros)input.readObject();
+			if(n.getNumero()<0) {
+				System.out.println("Numero incorrecto "+n.getNumero());
+				continue;
+			}
 			System.out.println("recibido el obejto " +n);
 			//3 modificamos el objeto
 			n.setCuadrado(n.getNumero()*n.getNumero());
 			n.setCubo(n.getNumero()*n.getNumero()*n.getNumero());
 			System.out.println("Enviado objeto modificado "+n);
 			output.writeObject(n);
+			
 
-		}else {
-			System.out.println("Numero incorrecto ");
 		}
+		
+		
 		//cerramos flujos
 		input.close();
 		output.close();
